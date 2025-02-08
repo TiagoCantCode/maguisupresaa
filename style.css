@@ -1,0 +1,140 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    background-color: #FADADD;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+#image-container img {
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+#image-container img:hover {
+    transform: scale(1.1);
+}
+
+#question {
+    font-family: 'Comic Sans MS', cursive;
+    font-size: 52px;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+#options {
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-size: 26px;
+    font-family: 'Comic Sans MS', cursive;
+    background-color: #FB607F;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Memórias */
+#memories-container {
+    margin-top: 20px;
+}
+
+#memories-container .photos {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#memories-container img {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    object-fit: cover;
+    border: 2px solid #FB607F;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+#memories-container img:hover {
+    transform: scale(1.1);
+}
+
+/* Quiz */
+#quiz-container {
+    margin-top: 20px;
+}
+
+#quiz-result {
+    font-size: 20px;
+    color: #FB607F;
+    margin-top: 10px;
+}
+
+/* Contador de tempo juntos */
+#time-together {
+    margin-top: 20px;
+    font-size: 24px;
+    color: #FB607F;
+}
+
+/* Controlos de áudio */
+#audio-controls {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#mute-button {
+    background-color: #FB607F;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Comic Sans MS', cursive;
+}
+
+#volume-slider {
+    width: 100px;
+    cursor: pointer;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    #question {
+        font-size: 32px;
+    }
+
+    button {
+        font-size: 20px;
+        padding: 8px 16px;
+    }
+
+    #memories-container img {
+        width: 100px;
+        height: 100px;
+    }
+}

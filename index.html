@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Be My Valentine?</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Controlos de áudio -->
+    <div id="audio-controls">
+        <button id="mute-button">🔇 Mute</button>
+        <input type="range" id="volume-slider" min="0" max="1" step="0.1" value="0.5">
+    </div>
+
+    <div id="container">
+        <!-- Imagem inicial do gato -->
+        <div id="image-container"></div>
+
+        <!-- Texto e botões -->
+        <div id="text-container">
+            <div id="question">Will you be my valentine?</div>
+            <div id="options">
+                <button id="yes-button" onclick="selectOption('sim')">Sim</button>
+                <button id="no-button" onclick="selectOption('não')">Não</button>
+            </div>
+        </div>
+
+        <!-- Memórias (fotos) -->
+        <div id="memories-container" class="hidden">
+            <h3>memórias nossas</h3>
+            <div class="photos">
+                <img src="IMG_8598.jpg" alt="Memória 1" class="gallery-image">
+                <img src="IMG_7899.png" alt="Memória 2" class="gallery-image">
+                <img src="fofinhos.png" alt="Memória 3" class="gallery-image">
+                <img src="05e5eb0f-e139-44cf-a723-21c0cdf61d78.jpg" alt="Memória 4" class="gallery-image">
+            </div>
+        </div>
+
+        <!-- Contador de tempo juntos -->
+        <div id="time-together" class="hidden">
+            <h3>já se passaram: <span id="time-counter"></span></h3>
+        </div>
+
+        <!-- Quiz -->
+        <div id="quiz-container" class="hidden">
+            <h3>Gostaste Margarida?</h3>
+            <button onclick="checkAnswer('Siimm')">Siimm</button>
+            <button onclick="checkAnswer('Não.')">Não.</button>
+            <button onclick="checkAnswer('és mesmo totó')">És mesmo totó</button>
+            <p id="quiz-result"></p>
+        </div>
+    </div>
+
+    <!-- Áudio de fundo -->
+    <audio id="background-music" loop>
+        <source src="love-like-you-end-credits-karaoke-version.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Biblioteca de confetes -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+    <!-- Script principal -->
+    <script src="script.js"></script>
+</body>
+
+</html>
